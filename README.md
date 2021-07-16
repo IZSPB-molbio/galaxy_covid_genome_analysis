@@ -11,6 +11,13 @@ Per ottenere i consensus FASTA vengono usati due workflow in sequenza, già impo
 
 ## COVID-19: variation analysis on ARTIC PE data
 
+### Workflow overview
+
+Aprire immagine in una nuova scheda!
+
+<img src="https://covid19.galaxyproject.org/assets/img/wf.14034fd2.png"
+     alt="COVID-19: variation analysis on ARTIC PE data" />
+
 ### Preparazione dataset
 
 Il workflow richiede:
@@ -60,7 +67,7 @@ Apparirà la schermata per impostare il workflow. Da qui vanno caricati i file a
 
 A questo punto il workflow sarà pronto per essere avviato tramite il pulsante Play blu in alto a destra.
 
-### Risultati
+### Output
 
 La pipeline produrrà molti output. Quelli più essenziali per capire la buona riuscita del run sono:
 
@@ -69,13 +76,23 @@ La pipeline produrrà molti output. Quelli più essenziali per capire la buona r
 
 ## COVID-19: consensus construction
 
-Il file di input di questa pipeline è la collection di VCF generata dal workflow precedente. 
+Il file di input di questa pipeline è la collection di VCF generata dal workflow precedente (**Final SNPEff annotated variants**). 
 
 ### Avviare il workflow
 
 - Selezionare (dal menù in alto bordato in blu) "Workflow"
-- Cliccare sul tasto Play blu sulla destra del workflow "COVID-19: variation analysis on ARTIC PE data"
+- Cliccare sul tasto Play blu sulla destra del workflow "COVID-19: consensus construction"
 
 Apparirà la schermata per impostare il workflow.
 
+- "Variant calls": selezionare **Final SNPEff annotated variants**
+- "aligned reads data for depth calculation": selezionare **ivar removereads on collection...**
+- "Reference genome": dovrebbe già esserci il file NC_045512.2.fasta, se no riselezionarlo.
+
+### Output
+
 Output: `Multisample consensus FASTA`.
+
+## PANGOLIN & NextClade
+
+## I-Co-Gen
