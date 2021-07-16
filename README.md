@@ -119,4 +119,7 @@ L'analisi su Nextclade indicherà quali genomi escludere (inizialmente) dall'upl
 
 ## Sottomissione a I-Co-Gen
 
-La procedura qui riportata sintetizza quanto descritto nel documento IRIDA21-ICoGen.pdf (in questa repository) a partire da pagina 22 (sezione "Invio batch mediante ftps")
+Per la sottomissione a I-Co-Gen si può seguire la procedura riportata nel documento IRIDA21-ICoGen.pdf (in questa repository) a partire da pagina 22 (sezione "Invio batch mediante ftps"). Alcune note:
+
+- Per collegarsi via FTP al server ISS bisogna aver installato un client tipo FileZilla
+- Le credenziali per l'accesso sono su MEGA, nel file `Covid/icogen/icogen_batch.txt`.
