@@ -1,4 +1,4 @@
-# Analisi genomi SARS-CoV-2
+# Analisi genomi SARS-CoV-2 su Galaxy Europe
 
 <!-- TOC START min:2 max:3 link:true asterisk:false update:true -->
 - [Introduzione](#introduzione)
