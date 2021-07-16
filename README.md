@@ -12,6 +12,7 @@
     - [Output](#output-1)
 - [PANGOLIN & NextClade](#pangolin--nextclade)
 - [Sottomissione a I-Co-Gen](#sottomissione-a-i-co-gen)
+- [Sottomissione a GISAID](#sottomissione-a-gisaid)
 <!-- TOC END -->
 
 ## Introduzione
@@ -123,3 +124,20 @@ Per la sottomissione a I-Co-Gen si può seguire la procedura riportata nel docum
 
 - Per collegarsi via FTP al server ISS bisogna aver installato un client tipo FileZilla
 - Le credenziali per l'accesso sono su MEGA, nel file `Covid/icogen/icogen_batch.txt`.
+- Per ottenere la lista dei nomi dei file da inserire nel file batch.csv si può usare il tool Galaxy "Extract element identifiers of a list collection" (nella sezione "Collection Operations"). Usando questo tool sulla collection generata all'inizio del workflow si ricava la lista dei campioni, che si può usare come base per immettere i nomi dei file fastq nel file batch.csv.
+- Per generare l'archivio per la sottomissione, è importante selezionare tutti i file (batch.csv + tutti i fastq), cliccare col tasto destro e generare un archivio zip.
+
+## Sottomissione a GISAID
+
+Per la sottomissione a GISAID bisogna generare la tabella per la sottomissione e gli ID appropriati e creare una copia del `Multisample consensus FASTA` con i nuovi ID. Può essere utile in questo senso usare alcuni tool disponibili qui: https://users-birc.au.dk/palle/php/fabox/ 
+
+Una possibile procedura potrebbe prevedere:
+
+- **Estrazione degli ID da sostituire** con il tool [FASTA header extractor](https://users-birc.au.dk/palle/php/fabox/header_extractor.php)
+- Utilizzare gli ID estratti per generare i nuovi ID, ovvero per passare da `PT669_S30_L001_001.fastq` a `hCoV-19/Italy/APU-IZSPB-669PT/2021`.
+- **Sostituzione degli ID** con il tool [header replacer](https://users-birc.au.dk/palle/php/fabox/header_replacer.php). In particolare:
+    - nella pagina del tool, caricare il multifasta
+    - incollare gli ID estratti dal multifasta nel box "Optional: input header search terms (to search the old headers)"
+    - incollare i nuovi ID nel box "Input the new headers, one per sequence"
+    - cliccare su "replace headers".
+    
