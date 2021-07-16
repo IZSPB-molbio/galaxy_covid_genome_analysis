@@ -1,6 +1,22 @@
 # Analisi genomi SARS-CoV-2
 
-Per ottenere i consensus FASTA vengono usati due workflow in sequenza, <u>già importati nell'account parisi.izspb@gmail.com su usegalaxy.eu</u>:
+<!-- TOC START min:2 max:3 link:true asterisk:false update:true -->
+- [Introduzione](#introduzione)
+- [COVID-19: variation analysis on ARTIC PE data](#covid-19-variation-analysis-on-artic-pe-data)
+    - [Workflow overview](#workflow-overview)
+    - [Preparazione read dataset e file accessori](#preparazione-read-dataset-e-file-accessori)
+    - [Avviare il workflow](#avviare-il-workflow)
+    - [Output](#output)
+- [COVID-19: consensus construction](#covid-19-consensus-construction)
+    - [Avviare il workflow](#avviare-il-workflow-1)
+    - [Output](#output-1)
+- [PANGOLIN & NextClade](#pangolin--nextclade)
+- [Sottomissione a I-Co-Gen](#sottomissione-a-i-co-gen)
+<!-- TOC END -->
+
+## Introduzione
+
+Per analizzare i dati di sequenziamento e ottenere i consensus FASTA vengono usati due workflow in sequenza, <u>già importati nell'account parisi.izspb@gmail.com su usegalaxy.eu</u>:
 
 - **COVID-19: variation analysis on ARTIC PE data** per ottenere la lista delle varianti per ogni campione, a partire dalle read grezze;
 - **COVID-19: consensus construction** per ottenere i FASTA consensus dalle varianti.
@@ -99,6 +115,8 @@ Output: `Multisample consensus FASTA`.
 - https://pangolin.cog-uk.io/
 - https://clades.nextstrain.org/
 
-L'analisi su Nextclade indicherà quali genomi escludere (inizialmente) dall'upload su I-Co-Gen. Genomi che dall'analisi Nextclade risultano flaggati in rosso per **Mixed sites** o **Missing data** dovrebbero essere scartati. 
+L'analisi su Nextclade indicherà quali genomi escludere (inizialmente) dall'upload su I-Co-Gen. Campioni che dall'analisi Nextclade risultano flaggati in rosso per **Mixed sites** o **Missing data** dovrebbero essere scartati. 
 
-## I-Co-Gen
+## Sottomissione a I-Co-Gen
+
+La procedura qui riportata sintetizza quanto descritto nel documento IRIDA21-ICoGen.pdf (in questa repository) a partire da pagina 22 (sezione "Invio batch mediante ftps")
