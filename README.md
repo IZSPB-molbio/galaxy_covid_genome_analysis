@@ -16,7 +16,7 @@
 
 ## Introduzione
 
-Per analizzare i dati di sequenziamento e ottenere i consensus FASTA vengono usati due workflow in sequenza, <u>già importati nell'account parisi.izspb@gmail.com su usegalaxy.eu</u>:
+Per analizzare i dati di sequenziamento e ottenere i consensus FASTA vengono usati due workflow in sequenza, <u>già importati nell'account parisi.izspb@gmail.com su [usegalaxy.eu](https://usegalaxy.eu)</u>:
 
 - **COVID-19: variation analysis on ARTIC PE data** per ottenere la lista delle varianti per ogni campione, a partire dalle read grezze;
 - **COVID-19: consensus construction** per ottenere i FASTA consensus dalle varianti.
