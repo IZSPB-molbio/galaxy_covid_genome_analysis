@@ -4,7 +4,7 @@ Fonte:
 
 - https://covid19.galaxyproject.org/artic/#a-galaxy-workflow-for-the-analysis-of-illumina-paired-end-sequenced-artic-amplicon-data
 
-Per ottenere i consensus FASTA vengono usati due workflow in sequenza, già importati nell'account parisi.izspb@gmail.com su usegalaxy.eu:
+Per ottenere i consensus FASTA vengono usati due workflow in sequenza, <u>già importati nell'account parisi.izspb@gmail.com su usegalaxy.eu</u>:
 
 - **COVID-19: variation analysis on ARTIC PE data** per ottenere la lista delle varianti per ogni campione, a partire dalle read grezze;
 - **COVID-19: consensus construction** per ottenere i FASTA consensus dalle varianti.
@@ -18,18 +18,11 @@ Aprire immagine in una nuova scheda!
 <img src="https://covid19.galaxyproject.org/assets/img/wf.14034fd2.png"
      alt="COVID-19: variation analysis on ARTIC PE data" />
 
-### Preparazione dataset
+### Preparazione read dataset e file accessori
 
-Il workflow richiede:
+#### Caricamento collection
 
-- **Collection** di PE reads
-- [Sequenza di riferimento in formato FASTA](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=fasta)
-- [BED file](https://covid19.galaxyproject.org/artic/nCoV-2019_v3.bed) con le posizioni dei primer ARTIC V3 sulla sequenza di riferimento
-- [Amplicon info file](https://covid19.galaxyproject.org/artic/ARTIC_SARS_CoV-2_amplicon_info_v3.tsv) con le info sugli appaiamenti dei primer
-
-### Caricamento collection
-
-#### Caricare fastq grezzi
+##### Caricare fastq grezzi
 
 Per un qualche motivo, caricare i fastq direttamente come collection non funziona. Pertanto è necessario:
 
@@ -38,9 +31,9 @@ Per un qualche motivo, caricare i fastq direttamente come collection non funzion
 - Selezionare Start
 - Al termine dell'upload, cliccare su Close
 
-#### Creare collection
+##### Creare collection
 
-**Video tutorial**: https://www.youtube.com/watch?v=6toVj35q1r0&t=3s
+Video tutorial: https://www.youtube.com/watch?v=6toVj35q1r0&t=3s
 
 - Dalla History corrente, selezionare il simbolo "check" per effettuare operazioni su dataset multipli
 - Selezionare tutti i file fastq
@@ -52,6 +45,14 @@ A questo punto bisogna definire un criterio di definizione dei file fastq forwar
 - Selezionare "Create collection"
 
 La collection così generata potrà essere usata come input per il workflow.
+
+#### File accessori
+
+Oltre alla collection di read grezze, il workflow richiede dei file accessori, inclusi in questa repository e scaricati dal sito di riferimento di questo workflow (quindi è indifferente se vengono usate le versioni caricate qui o quelle scaricate seguendo i rispettivi link). Questi file saranno caricati su Galaxy all'avvio del workflow (sezione successiva).
+
+- [Sequenza di riferimento in formato FASTA](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=fasta) - file NC_045512.2.fasta
+- [BED file](https://covid19.galaxyproject.org/artic/nCoV-2019_v3.bed) con le posizioni dei primer ARTIC V3 sulla sequenza di riferimento - file nCoV-2019_v3.bed
+- [Amplicon info file](https://covid19.galaxyproject.org/artic/ARTIC_SARS_CoV-2_amplicon_info_v3.tsv) con le info sugli appaiamenti dei primer - file ARTIC_SARS_CoV-2_amplicon_info_v3.tsv.
 
 ### Avviare il workflow
 
