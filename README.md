@@ -120,6 +120,8 @@ L'analisi su Nextclade indicherà quali genomi escludere (inizialmente) dall'upl
 
 ## Sottomissione a I-Co-Gen
 
+**Procedura non più utilizzata in quanto i genomi per I-Co-Gen sono già analizzati sulla piattaforma stessa**
+
 Per la sottomissione a I-Co-Gen si può seguire la procedura riportata nel documento IRIDA21-ICoGen.pdf (in questa repository) a partire da pagina 22 (sezione "Invio batch mediante ftps"). Alcune note:
 
 - Per collegarsi via FTP al server ISS bisogna aver installato un client tipo FileZilla
@@ -128,6 +130,8 @@ Per la sottomissione a I-Co-Gen si può seguire la procedura riportata nel docum
 - Per generare l'archivio per la sottomissione, è importante selezionare tutti i file (batch.csv + tutti i fastq), cliccare col tasto destro e generare un archivio zip.
 
 ## Sottomissione a GISAID
+
+**Procedura non più utilizzata in quanto la sottomissione a GISAID è già effettuata tramite la piattaforma I-Co-Gen**
 
 Per la sottomissione a GISAID bisogna generare la tabella per la sottomissione e gli ID appropriati e creare una copia del `Multisample consensus FASTA` con i nuovi ID. Può essere utile in questo senso usare alcuni tool disponibili qui: https://users-birc.au.dk/palle/php/fabox/ 
 
